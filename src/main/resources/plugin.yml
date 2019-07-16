@@ -1,0 +1,3 @@
+name: PVEPlus
+version: ${project.version}
+main: bounen057.pveplus.PVEPlus
