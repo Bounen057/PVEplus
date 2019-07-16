@@ -9,10 +9,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class PVEPlus extends JavaPlugin {
 
 
-    CustomConfig config,enemy;
+    public CustomConfig config,enemy;
     @Override
     public void onEnable() {
-
         config = new CustomConfig(this);
         config.saveDefaultConfig();
 
@@ -27,5 +26,7 @@ public final class PVEPlus extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        config.saveConfig();
+        enemy.saveConfig();
     }
 }
