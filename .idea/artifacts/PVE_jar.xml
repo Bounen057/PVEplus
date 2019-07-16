@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="PVE:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/PVE_jar</output-path>
-    <root id="archive" name="PVE.jar">
-      <element id="module-output" name="PVE" />
-    </root>
-  </artifact>
-</component>

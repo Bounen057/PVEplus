@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PVEPlus:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PVEPlus_jar</output-path>
+    <root id="archive" name="PVEPlus.jar">
+      <element id="module-output" name="PVE" />
+    </root>
+  </artifact>
+</component>
