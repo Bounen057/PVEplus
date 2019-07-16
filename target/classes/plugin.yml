@@ -1,5 +1,5 @@
 name: PVEPlus
-version: ${project.version}
+version: 1.0-SNAPSHOT
 main: bounen057.pveplus.PVEPlus
 
 commands:
