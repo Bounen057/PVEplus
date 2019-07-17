@@ -29,6 +29,10 @@ public class AreaList {
         Inventory inv = Bukkit.createInventory(null,9 * 4,inv_name);
 
         inv.setItem(0,item("layer"));
+        inv.setItem(1,item("desert"));
+        inv.setItem(2,item("mountain"));
+        inv.setItem(3,item("forest"));
+        inv.setItem(4,item("ice"));
 
         p.openInventory(inv);
     }
@@ -55,6 +59,35 @@ public class AreaList {
             lore.add("§e-2 地下      y20~");
             lore.add("§e-3 地下第二層 y0~");
         }
+        if(str.equals("desert")){
+            item.setType(Material.SAND);
+            itemMeta = item.getItemMeta();
+
+            itemMeta.setDisplayName("desert");
+            lore.add("§e砂漠のモンスター");
+        }
+        if(str.equals("mountain")){
+            item.setType(Material.GRASS);
+            itemMeta = item.getItemMeta();
+
+            itemMeta.setDisplayName("mountain");
+            lore.add("§e山岳のモンスター");
+        }
+        if(str.equals("forest")){
+            item.setType(Material.LEAVES);
+            itemMeta = item.getItemMeta();
+
+            itemMeta.setDisplayName("forest");
+            lore.add("§e森のモンスター");
+        }
+        if(str.equals("ice")){
+            item.setType(Material.PACKED_ICE);
+            itemMeta = item.getItemMeta();
+
+            itemMeta.setDisplayName("ice");
+            lore.add("§e雪原のモンスター");
+        }
+
 
 
         itemMeta.setLore(lore);

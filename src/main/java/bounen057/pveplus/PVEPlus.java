@@ -10,7 +10,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class PVEPlus extends JavaPlugin {
 
 
+    public String logo = "§e[PVE]" + "§f";
     public CustomConfig config,enemy;
+
+
     @Override
     public void onEnable() {
         config = new CustomConfig(this);

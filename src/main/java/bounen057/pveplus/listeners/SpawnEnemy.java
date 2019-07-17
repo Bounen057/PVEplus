@@ -1,6 +1,7 @@
 package bounen057.pveplus.listeners;
 
 import bounen057.pveplus.PVEPlus;
+import bounen057.pveplus.utils.GetBiome;
 import bounen057.pveplus.utils.GetLayer;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -38,42 +39,51 @@ public class SpawnEnemy implements Listener{
         }
     }
 
+
     /**
      * 敵Mobがスポーンしたときに呼ばれるメソッド
      */
+
+    List<String> enemies = new ArrayList<>();
+    FileConfiguration conf = plugin.enemy.getConfig();
+
     @EventHandler
     public void OnSpawn(CreatureSpawnEvent e) {
         LivingEntity entity = e.getEntity();
         Location entityLoc = entity.getLocation();
+
+        boolean isSpawn = false;
 
         // ワールド名が違う場合return
         if ( entityLoc.getWorld() != miningSpawnPoint.getWorld() ) {
             return;
         }
 
-        // スポーン理由が NATURAL ではない場合return
-        if ( e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.NATURAL ) {
+        // スポーン理由が NATURAL もしくは SPAWNER_EGG ではない場合return
+        if ( e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.NATURAL) {
+            isSpawn =true;
+        }
+        if ( e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.SPAWNER_EGG ){
+            isSpawn =true;
+        }
+
+        if(!isSpawn){
             return;
         }
-        FileConfiguration conf = plugin.enemy.getConfig();
-        int layer = getLayer.Get(entityLoc);
 
+        // 変数
+        int layer = getLayer.Get(entityLoc);
+        String biome = new GetBiome(plugin).BiomeCategory(entityLoc.getBlock().getBiome());
 
         // 各Mobを入れてランダムに抽選するList
-        List<String> enemies = new ArrayList<>();
+        enemies.clear();
 
-        // 設定されているKeyを取得する
-        for ( String mobName : conf.getConfigurationSection("area.layer." + layer).getKeys(false) ) {
-
-            // 比率を取得
-            int raito = plugin.enemy.getConfig().getInt("area.layer."+layer+"."+mobName);
-
-
-            // enemiesRaitoにその数だけ追加
-            for ( ; raito > 0; raito-- ) {
-                enemies.add(mobName);
-            }
+        // 通常のモンスター
+        layer_enemy(layer);
+        if(biome != null){
+            biome_enemy(layer,biome);
         }
+
 
         // サイズが0以下ならreturn
         if ( enemies.size() <= 0 ) {
@@ -85,10 +95,6 @@ public class SpawnEnemy implements Listener{
         Collections.shuffle(enemies);
         String mobName = enemies.get(0);
 
-        /**
-         * この抽選方法は数が大きすぎるとその分だけサーバーが停止してしまう。なにかもっと良い方法があるはず。でもこれが一番読みやすい
-         */
-
         // 敵Mobをスポーン
         spawn(mobName, entityLoc);
 
@@ -99,5 +105,43 @@ public class SpawnEnemy implements Listener{
     private void spawn(String name, Location l) {
         String locationStr = l.getWorld().getName() + "," + l.getX() + "," + l.getY() + "," + l.getZ();
         Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "mm mobs spawn " + name + " 1 " + locationStr);
+    }
+
+    private void layer_enemy(int layer){
+        if(conf.get("area.layer." + layer) == null){
+            return;
+        }
+
+        // 設定されているKeyを取得する
+        for ( String mobName : conf.getConfigurationSection("area.layer." + layer).getKeys(false) ) {
+
+            // 比率を取得
+            int raito = conf.getInt("area.layer."+layer+"."+mobName);
+
+
+            // enemiesRaitoにその数だけ追加
+            for ( ; raito > 0; raito-- ) {
+                enemies.add(mobName);
+            }
+        }
+    }
+
+    private void biome_enemy(int layer,String biome){
+        if(conf.get("area."+biome+"." + layer) == null){
+            return;
+        }
+
+        // 設定されているKeyを取得する
+        for ( String mobName : conf.getConfigurationSection("area."+biome+"." + layer).getKeys(false) ) {
+
+            // 比率を取得
+            int raito = conf.getInt("area."+biome+"."+layer+"."+mobName);
+
+
+            // enemiesRaitoにその数だけ追加
+            for ( ; raito > 0; raito-- ) {
+                enemies.add(mobName);
+            }
+        }
     }
 }
