@@ -7,16 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98117298-6d24-4ead-a7f8-d4fc5bb1bb0f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetBiome.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetLayer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/SubFunctions.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/AreaList.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/ShowAreaEnemy.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/ClickedInventory.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/PVEPlus_jar/PVEPlus.jar" afterPath="$PROJECT_DIR$/out/artifacts/PVEPlus_jar/PVEPlus.jar" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/SpawnEnemy.java" afterPath="$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/SpawnEnemy.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bounen057/pveplus/PVEPlus.class" afterPath="$PROJECT_DIR$/target/classes/bounen057/pveplus/PVEPlus.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bounen057/pveplus/commands/PVEcommand.class" afterPath="$PROJECT_DIR$/target/classes/bounen057/pveplus/commands/PVEcommand.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/bounen057/pveplus/listeners/SpawnEnemy.class" afterPath="$PROJECT_DIR$/target/classes/bounen057/pveplus/listeners/SpawnEnemy.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,31 +31,11 @@
       <file leaf-file-name="PVEPlus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="345">
+              <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enemy.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/enemy.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +57,8 @@
       <file leaf-file-name="SpawnEnemy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/SpawnEnemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="65" column="20" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="67" selection-end-column="75" />
+            <state relative-caret-position="395">
+              <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,12 +66,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <file leaf-file-name="AreaList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/AreaList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="-88">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowAreaEnemy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/ShowAreaEnemy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="66" column="34" lean-forward="true" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClickedInventory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/ClickedInventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,25 +111,12 @@
       <file leaf-file-name="PVEcommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="506">
+              <caret line="39" column="97" lean-forward="false" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubFunctions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/SubFunctions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#202#203#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,8 +139,8 @@
       <file leaf-file-name="GetLayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="375">
+              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#266#267#0" expanded="true" />
@@ -175,11 +172,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/Data/CustomConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetBiome.java" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetLayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/SubFunctions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/ClickedInventory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/AreaList.java" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/CheckGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/ShowAreaEnemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/SpawnEnemy.java" />
       </list>
     </option>
@@ -266,6 +267,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pveplus" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PVE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PVE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pveplus" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PVE" type="b2602c69:ProjectViewProjectNode" />
@@ -480,7 +490,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -532,28 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/Data/CustomConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/SubFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -579,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/utils/GetLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="375">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#266#267#0" expanded="true" />
@@ -589,22 +579,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/Data/CustomConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        <state relative-caret-position="270">
+          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/PVEPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/commands/PVEcommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="39" column="97" lean-forward="false" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/CheckGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/AreaList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/ClickedInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/GUI/ShowAreaEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="66" column="34" lean-forward="true" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bounen057/pveplus/listeners/SpawnEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="65" column="20" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="67" selection-end-column="75" />
+        <state relative-caret-position="395">
+          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

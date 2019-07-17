@@ -5,6 +5,7 @@ import bounen057.pveplus.utils.GetLayer;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
@@ -26,10 +27,10 @@ import java.util.List;
 public class SpawnEnemy implements Listener{
     private PVEPlus plugin;
     private GetLayer getLayer = new GetLayer(plugin);
-    private Location miningSpawnPoint = null;
+        private Location miningSpawnPoint = null;
 
     public SpawnEnemy(PVEPlus plugin) {
-        this.plugin = plugin;
+            this.plugin = plugin;
 
         World mining = Bukkit.getWorld("mining");
         if ( mining != null ) {
@@ -63,9 +64,10 @@ public class SpawnEnemy implements Listener{
 
         // 設定されているKeyを取得する
         for ( String mobName : conf.getConfigurationSection("area.layer." + layer).getKeys(false) ) {
+
             // 比率を取得
             int raito = plugin.enemy.getConfig().getInt("area.layer."+layer+"."+mobName);
-            System.out.println("area.layer."+layer+"."+mobName+": "+raito);
+
 
             // enemiesRaitoにその数だけ追加
             for ( ; raito > 0; raito-- ) {

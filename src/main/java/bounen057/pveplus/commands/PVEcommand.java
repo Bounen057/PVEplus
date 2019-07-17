@@ -1,5 +1,6 @@
 package bounen057.pveplus.commands;
 
+import bounen057.pveplus.GUI.AreaList;
 import bounen057.pveplus.PVEPlus;
 import bounen057.pveplus.utils.SubFunctions;
 import org.bukkit.command.Command;
@@ -20,9 +21,14 @@ public class PVEcommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player)sender;
         if(args[0].equals("help")){
-            p.sendMessage("§a/pve enemy list layer <数字>");
-            p.sendMessage("§a/pve enemy list baiome <id>");
+            p.sendMessage("§a/pve enemy list");
             p.sendMessage("§a/pve layer add <地層> <名前> <比重>");
+        }
+
+        if(args[0].equals("enemy")){
+            if(args[1].equals("list")){
+                new AreaList(plugin).show(p);
+            }
         }
 
         if(args[0].equals("layer")){
@@ -31,7 +37,7 @@ public class PVEcommand implements CommandExecutor {
                 String name = args[3];
                 String raito = args[4];
 
-                plugin.enemy.getConfig().set("area.layer."+layer+"."+name,raito);
+                plugin.enemy.getConfig().set("area.layer."+layer+"."+name,Integer.parseInt(raito));
             }
         }
 
