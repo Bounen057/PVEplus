@@ -45,7 +45,7 @@ public class SpawnEnemy implements Listener{
      */
 
     List<String> enemies = new ArrayList<>();
-    FileConfiguration conf = plugin.enemy.getConfig();
+
 
     @EventHandler
     public void OnSpawn(CreatureSpawnEvent e) {
@@ -60,10 +60,10 @@ public class SpawnEnemy implements Listener{
         }
 
         // スポーン理由が NATURAL もしくは SPAWNER_EGG ではない場合return
-        if ( e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.NATURAL) {
+        if ( e.getSpawnReason() == CreatureSpawnEvent.SpawnReason.NATURAL) {
             isSpawn =true;
         }
-        if ( e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.SPAWNER_EGG ){
+        if ( e.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SPAWNER_EGG ){
             isSpawn =true;
         }
 
@@ -103,11 +103,15 @@ public class SpawnEnemy implements Listener{
     }
 
     private void spawn(String name, Location l) {
+        System.out.println("test");
+
         String locationStr = l.getWorld().getName() + "," + l.getX() + "," + l.getY() + "," + l.getZ();
         Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "mm mobs spawn " + name + " 1 " + locationStr);
     }
 
     private void layer_enemy(int layer){
+        FileConfiguration conf = plugin.enemy.getConfig();
+
         if(conf.get("area.layer." + layer) == null){
             return;
         }
@@ -127,6 +131,8 @@ public class SpawnEnemy implements Listener{
     }
 
     private void biome_enemy(int layer,String biome){
+        FileConfiguration conf = plugin.enemy.getConfig();
+
         if(conf.get("area."+biome+"." + layer) == null){
             return;
         }
